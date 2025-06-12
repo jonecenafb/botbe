@@ -1,3 +1,7 @@
+console.log("ENV loaded:");
+console.log("PRIVATE_KEY length:", process.env.PRIVATE_KEY?.length); // Không in key
+console.log("PROVIDER_URL:", process.env.PROVIDER_URL?.slice(0, 30), "...");
+
 require('dotenv').config();
 const { ethers } = require('ethers');
 
