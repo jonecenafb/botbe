@@ -5,6 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node index.js",
+    "withdraw": "node withdraw.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
