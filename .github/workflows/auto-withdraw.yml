@@ -25,8 +25,8 @@ jobs:
       - name: Run withdraw script
         run: node withdraw.js
         env:
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          RPC_URL: ${{ secrets.RPC_URL }}
-          CONTRACT_ADDRESS: ${{ secrets.CONTRACT_ADDRESS }}
-          USDT_ADDRESS: ${{ secrets.USDT_ADDRESS }}
+  PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+  PROVIDER_URL: ${{ secrets.PROVIDER_URL }}
+  CONTRACT_ADDRESS: ${{ secrets.CONTRACT_ADDRESS }}
+  USDT_ADDRESS: ${{ secrets.USDT_ADDRESS }}
           # nếu script cần thêm biến khác, thêm vào đây
