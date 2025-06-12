@@ -2,7 +2,7 @@ require('dotenv').config();
 const { ethers } = require('ethers');
 
 (async () => {
-  const RPC_URL = process.env.PROVIDER_URL_URL;
+  const PROVIDER_URL = process.env.PROVIDER_URL;
   let PRIVATE_KEY = process.env.PRIVATE_KEY;
   if (!PRIVATE_KEY.startsWith('0x')) {
     PRIVATE_KEY = '0x' + PRIVATE_KEY;
@@ -10,7 +10,7 @@ const { ethers } = require('ethers');
   const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
   const USDT_ADDRESS = process.env.USDT_ADDRESS;
   // kiểm tra đủ env, nếu thiếu thì exit(1)
-  const provider = new ethers.JsonRpcProvider(RPC_URL);
+  const provider = new ethers.JsonRpcProvider(PROVIDER_URL);
   const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
   const contract = new ethers.Contract(CONTRACT_ADDRESS,
     ["function withdrawUSDT(uint256 amount) external"], wallet);
