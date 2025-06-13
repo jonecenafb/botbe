@@ -1,11 +1,14 @@
-console.log("ENV loaded:");
-console.log("PRIVATE_KEY length:", process.env.PRIVATE_KEY?.length);
-console.log("PROVIDER_URL:", process.env.PROVIDER_URL?.slice(0, 30), "...");
+
 
 require("dotenv").config();
 const { ethers } = require("ethers");
 const fs = require("fs");
 const path = require("path");
+
+console.log("ENV loaded:");
+console.log("PRIVATE_KEY length:", process.env.PRIVATE_KEY?.length);
+console.log("PROVIDER_URL:", process.env.PROVIDER_URL?.slice(0, 30), "...");
+
 
 (async () => {
   const PROVIDER_URL = process.env.PROVIDER_URL;
